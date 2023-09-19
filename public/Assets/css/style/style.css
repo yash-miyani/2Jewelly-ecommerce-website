@@ -1,0 +1,580 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&family=Prata&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.py-8 {
+  padding: 80px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 18px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff9f6b;
+  border: 5px solid #000;
+  border-radius: 10px;
+  background-clip: content-box;
+}
+
+.heading h2 {
+  font-size: 56px;
+}
+
+@media (max-width: 768px) {
+  .heading h2 {
+    font-size: 32px;
+  }
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Prata", serif;
+}
+
+/* ==================== Navigation bar ============== */
+.navbar {
+  box-shadow: 0px 0px 5px 5px rgba(204, 204, 204, 0.3);
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+}
+.nav-link {
+  color: black !important;
+}
+
+.active {
+  color: #ff9f6b !important;
+  font-weight: 500;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block !important;
+}
+
+.dropdown-item {
+  background-color: #fff !important;
+}
+
+.dropdown-item.active {
+  color: #ff9f6b;
+  background-color: #fff !important;
+}
+.dropdown-item:hover {
+  color: #ff9f6b;
+}
+
+.nav-btn {
+  background-color: #ff9f6b !important;
+  border: 0;
+  padding: 12px 25px;
+  border-radius: 0 !important;
+  transition: all 0.5s;
+}
+.nav-btn:hover {
+  background-color: #000 !important;
+}
+
+/* =================== Home Header ======================== */
+
+.home-header h1 {
+  font-size: 68px;
+  font-family: "Prata", serif;
+  font-weight: 500;
+  color: #fff;
+}
+.home-header button {
+  color: #ff9f6b !important;
+  background-color: #fff !important;
+  border: 0 !important;
+  padding: 12px 45px;
+  border-radius: 0 !important;
+  transition: all 0.5s;
+  font-size: 20px;
+}
+.home-header button:hover {
+  background-color: #000 !important;
+}
+
+.home-header-h2 {
+  font-size: 52px;
+  font-family: "Prata", serif;
+}
+
+@media (max-width: 992px) {
+  .home-header h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-header h1 {
+    font-size: 36px;
+  }
+  .home-header-h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-header h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .home-header button {
+    margin: 0 auto;
+  }
+  .home-header-h2 {
+    font-size: 24px;
+  }
+}
+
+/* ============================ Shoping Jwelerry Section ================= */
+
+.shopingCard {
+  overflow: hidden;
+}
+
+.shopingCard:hover h2 {
+  color: #ff9f6b;
+  transition: all 0.5s;
+}
+
+.marquee-container-tb > * {
+  display: inline-block;
+  animation: marqueeTb 2s linear infinite;
+  padding: 0 10px;
+  transition: all 0.5s;
+  font-size: 18px;
+}
+
+.marquee-container-tb {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 10px;
+  color: #ff9f6b;
+}
+
+.marquee-container-lr > * {
+  display: inline-block;
+  animation: marqueelr 2s linear infinite;
+  padding: 0 10px;
+  transition: all 0.5s;
+  font-size: 18px;
+}
+
+.marquee-container-lr {
+  width: -100%;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ff9f6b;
+  writing-mode: vertical-rl;
+  padding: 10px;
+  bottom: -60px;
+}
+
+.marquee-container-lr span {
+  padding: 5px 0;
+}
+
+.marquee-top {
+  top: 0;
+  opacity: 0;
+}
+
+.marquee-botoom {
+  bottom: 0;
+  opacity: 0;
+}
+
+.marquee-right {
+  right: 0;
+  opacity: 0;
+}
+
+.marquee-left {
+  left: 0;
+  opacity: 0;
+}
+
+@keyframes marqueeTb {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marqueelr {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.shopingCard:hover .marquee-top,
+.shopingCard:hover .marquee-botoom,
+.shopingCard:hover .marquee-right,
+.shopingCard:hover .marquee-left {
+  cursor: pointer;
+  opacity: 1 !important;
+}
+
+/* ============================ Shoping Categorey Section ================= */
+
+.categorey-home h2 {
+  font-size: 56px;
+}
+
+.categorey-home a {
+  font-size: 48px;
+  line-height: 5rem;
+  padding-left: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-family: "Prata", serif;
+  color: #000;
+}
+
+@media (max-width: 992px) {
+  .categorey-home h2 {
+    font-size: 40px;
+  }
+  .categorey-home a {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .categorey-home h2 {
+    font-size: 32px;
+  }
+  .categorey-home a {
+    font-size: 28px;
+  }
+}
+
+.categorey-home a:hover {
+  color: #ff9f6b;
+}
+
+.categoryHome-img img {
+  height: 150px;
+  width: 150px;
+}
+
+.categoryHome-img {
+  position: absolute;
+  top: -30%;
+  left: 25%;
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.categorey-home a:hover .categoryHome-img {
+  opacity: 1;
+  transform: rotate(-20deg);
+}
+
+/* ============================ Footer Section ================= */
+
+.footer-sec p,
+.subFooter-sec p {
+  transition: all 0.5s;
+}
+.footer-sec p:hover {
+  color: #ff9f6b;
+  cursor: pointer;
+}
+.footer-sec i {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #ff9f6b;
+}
+.subFooter-sec a {
+  color: #ff9f6b;
+  transition: all 0.5s;
+}
+.subFooter-sec a:hover {
+  text-decoration: underline;
+}
+
+/* ============================ Blog Post Section ================= */
+
+.blogPost-sec img {
+  transition: all 1s;
+  width: 100%;
+}
+.blogPost-sec img:hover {
+  transform: scale(1.1);
+}
+.blogPost-sec:hover h3 {
+  color: #ff9f6b;
+  transition: all 0.5s;
+}
+
+/* ============================ Header All Page Section ================= */
+
+.header-bg {
+  background-image: url("../../images/Header-bg.png");
+  background-position: center;
+  height: 350px;
+  background-size: cover;
+  margin-top: 5rem;
+}
+
+/* ============================ Follow Insta Page Section ================= */
+.insta-sec h2 {
+  font-size: 58px;
+}
+
+@media (max-width: 992px) {
+  .insta-sec h2 {
+    font-size: 48px;
+  }
+}
+
+.insta-sec-img::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.insta-sec-img i {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.insta-sec-img:hover::before {
+  opacity: 1;
+}
+.insta-sec-img:hover i {
+  opacity: 1;
+}
+
+/* ============================  About sec1 Page Section ================= */
+
+.about-sec1 h2 {
+  font-size: 58px;
+  font-weight: 500;
+}
+@media (max-width: 992px) {
+  .about-sec1 h2 {
+    font-size: 48px;
+  }
+}
+
+.about-sec1 h4 {
+  color: #ff9f6b;
+  font-weight: 600;
+}
+/* ============================  About sec2 Page Section ================= */
+
+.AboutBg-videoImg {
+  background-image: url("../../images/aboutBgVideoimg.png");
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.about-bg-i i {
+  background-color: #ff9f6b;
+  display: inline-block;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 3rem;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+.about-bg-i i:hover {
+  background-color: #000;
+}
+
+.about-btn {
+  font-size: 18px;
+}
+.about-btn:hover {
+  background-color: #000 !important;
+  transition: all 0.5s;
+}
+/* ============================  Contact Section ================= */
+
+.Contact-form input,
+.Contact-form textarea {
+  background-color: #fff3ed;
+  border: none;
+}
+
+.Contact-form input::placeholder,
+.Contact-form textarea::placeholder {
+  color: #000;
+}
+
+.Contact-form input:focus,
+.Contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #ff9f6b;
+}
+
+.Contact-form button {
+  background-color: #ff9f6b;
+  transition: all 0.5s;
+}
+.Contact-form button:hover {
+  background-color: #000;
+}
+/* ============================  PageNotFound Section ================= */
+
+.PageNotFound-sec {
+  margin-top: 5rem;
+}
+
+.PageNotFound-sec h2 {
+  font-size: 200px;
+  color: #ff9f6b;
+}
+
+.PageNotFound-sec h3 {
+  font-size: 60px;
+}
+
+@media (max-width: 576px) {
+  .PageNotFound-sec h2 {
+    font-size: 100px;
+  }
+  .PageNotFound-sec h3 {
+    font-size: 45px;
+  }
+}
+
+.Protfolio-Btn li {
+  padding: 10px;
+  background-color: #fff3ed;
+  margin: 0 10px;
+  font-size: 18px;
+  color: #ff9f6b;
+  transition: all 0.5s;
+  width: 15%;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .Protfolio-Btn {
+    flex-wrap: wrap;
+  }
+  .Protfolio-Btn li {
+    width: 40%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Protfolio-Btn {
+    flex-wrap: wrap;
+  }
+  .Protfolio-Btn li {
+    width: 80%;
+    margin-top: 15px;
+  }
+}
+
+.Protfolio-Btn li:hover {
+  background-color: #ff9f6b;
+  color: #fff;
+}
+
+/* ============================  GoToTop Btn Section ================= */
+
+.GoTotop-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-btn {
+  font-size: 16px;
+  font-weight: bolder;
+  width: 45px;
+  height: 45px;
+  color: #fff;
+  background-color: #ff9f6b;
+  box-shadow: 0px 0px 3px 3px rgba(204, 204, 204, 0.4);
+  border-radius: 50%;
+  bottom: 50px;
+  right: 50px;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: fixed;
+  transition: all 0.5s;
+}
+.top-btn:hover {
+  background-color: #ffb830;
+}
+.bi-arrow-up {
+  animation: gototop 0.8s linear infinite alternate-reverse;
+}
+@keyframes gototop {
+  0% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
